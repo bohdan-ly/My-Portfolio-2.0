@@ -1,23 +1,63 @@
 .home {
     height: 100%;
-    padding-top: 40vh;
+    padding-top: 30vh;
     overflow: hidden;
     align-items: center;
     text-align: center;
     background:
         linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)),
-        url('../../image/model-2.jpg') center right;
+        url('../../image/model-2.jpg') center;
     background-size: cover;
+
+    &__text {
+
+        margin-bottom: 10vh;
+
+        &h1,
+        span:not(.full__name):not(.home__name--last) {
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 2rem;
+            font-weight: 400;
+
+            &:hover {
+                color: $secondary-color;
+                transition: all 0.5s;
+            }
+        }
+
+
+
+        &__stack {
+            display: inline-block;
+            padding-top: 15px;
+            letter-spacing: 3px;
+            word-spacing: 10px;
+            font-size: 1rem;
+
+            &:hover {
+                color: $secondary-color;
+                transition: all 0.5s;
+            }
+        }
+
+
+    }
 
     &__name {
         font-size: 5rem;
         padding-bottom: 0.5rem;
         margin-bottom: 1rem;
-        border-bottom: 2px solid set-text-color($primary-color);
+
+        & span {
+            border-bottom: 2px solid set-text-color($primary-color);
+        }
 
         &--last {
             color: $secondary-color;
             font-weight: 700;
         }
     }
+
+
 }

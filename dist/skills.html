@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css" type="text/css">
-    <title>Contacts TwelveGEater</title>
+    <title>Skills TwelveGEater</title>
 </head>
 
 <body>
@@ -21,22 +21,22 @@
                         Home
                     </a>
                 </li>
-                <li class="menu-nav__item ">
+                <li class="menu-nav__item">
                     <a href="about.html" class="menu-nav__link">
                         About Me
                     </a>
                 </li>
-                <li class="menu-nav__item">
+                <li class="menu-nav__item active">
                     <a href="skills.html" class="menu-nav__link">
                         Skills
                     </a>
                 </li>
-                <li class="menu-nav__item ">
+                <li class="menu-nav__item">
                     <a href="projects.html" class="menu-nav__link">
                         My Projects
                     </a>
                 </li>
-                <li class="menu-nav__item active">
+                <li class="menu-nav__item">
                     <a href="contacts.html" class="menu-nav__link">
                         Contact Me
                     </a>
@@ -46,24 +46,52 @@
     </header>
 
     <main>
-        <section class="contacts">
-            <h2>Contact Me...</h2>
-
-            <div class="contacts__list">
-                <div class="contacts__email">
-                    <i class="fas fa-envelope"></i>Email
-                    <div class="text-secondary">lancelotvaza@gmail.com</div>
+        <section class="skills" id="skills">
+            <div class="skills__background-image"></div>
+            <h1>Skills</h1>
+            <p class="skills__info">
+            </p>
+            <div class="skills__item">
+                <div class="tag">
+                    <p>HTML</p>
                 </div>
-                <div class="contacts__phone">
-                    <i class="fas fa-mobile-alt"></i>Phone
-                    <div class="text-secondary">+380688961018</div>
-                </div>
-
-                <div class="contacts__email">
-                    <i class="fas fa-marker-alt"></i>Address
-                    <div class="text-secondary">#</div>
+                <div class="progressbar">
+                    <div class="bar-html"></div>
                 </div>
             </div>
+            <div class="skills__item">
+                <div class="tag">
+                    <p>JavaScript</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-javascript"></div>
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="tag">
+                    <p>React</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-react"></div>
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="tag">
+                    <p>CSS</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-css"></div>
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="tag">
+                    <p>Redux</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-redux"></div>
+                </div>
+            </div>
+
             <div class="social-icons">
                 <a href="https://mobile.twitter.com/TwelveGEater1">
                     <i class="fa fa-twitter fa-2x"></i>
@@ -84,7 +112,9 @@
 
     </main>
     <script src="https://kit.fontawesome.com/5b214ae072.js" crossorigin="anonymous"></script>
-    <script src="js/TimelineLite.min.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

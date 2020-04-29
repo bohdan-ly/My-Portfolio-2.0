@@ -191,8 +191,7 @@
 }
 
 .about {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  height: 100vh;
 }
 
 .about__bio-image {
@@ -200,6 +199,8 @@
   width: 46vw;
   background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../image/model-2.jpg") center;
   background-size: cover;
+  position: fixed;
+  z-index: -1;
 }
 
 .about__bio-image p {
@@ -208,7 +209,10 @@
 
 .about__info {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10vw;
   align-items: center;
+  width: 90vw;
 }
 
 .about__bio {
@@ -216,7 +220,7 @@
   padding: 0 1rem 20px 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 40vw;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .about__bio .text-secondary {
@@ -249,7 +253,7 @@
 
 .about .social-icons {
   display: flex;
-  flex-direction: column;
+  visibility: hidden;
 }
 
 .about footer {
@@ -405,8 +409,51 @@
     font-size: 1.5rem;
     font-weight: 500;
   }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .about__bio-image {
+    height: 100vh;
+    width: 46vw;
+    background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../image/model-2.jpg") center;
+    background-size: cover;
+  }
+  .about__bio-image p {
+    margin-bottom: 2.5rem;
+  }
+  .about__info {
+    display: grid;
+    align-items: center;
+  }
   .about__bio {
     font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem 20px 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 40vw;
+    margin: 2rem auto 0 auto;
+  }
+  .about__bio .text-secondary {
+    padding: 0.7rem 0;
+    font-weight: bold;
+  }
+  .about .jobs {
+    width: 30vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .about .jobs__job {
+    background: #414141;
+    padding: 1rem;
+    border-bottom: 5px solid #6d5dff;
+  }
+  .about .social-icons {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
   }
   .projects__bio-image {
     height: 40vh;
@@ -433,6 +480,52 @@
   .contacts__list {
     grid-template-columns: repeat(3, 1fr);
   }
+  .about {
+    display: flex;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+  }
+  .about__bio-image {
+    height: 100vh;
+    width: 46vw;
+    background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../image/model-2.jpg") center;
+    background-size: cover;
+  }
+  .about__bio-image p {
+    margin-bottom: 2.5rem;
+  }
+  .about__info {
+    display: flex;
+    align-items: center;
+  }
+  .about__bio {
+    text-align: center;
+    padding: 0 1rem 20px 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 40vw;
+    margin: 2rem auto 0 auto;
+  }
+  .about__bio .text-secondary {
+    padding: 0.7rem 0;
+    font-weight: bold;
+  }
+  .about .jobs {
+    width: 30vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .about .jobs__job {
+    background: #414141;
+    padding: 1rem;
+    border-bottom: 5px solid #6d5dff;
+  }
+  .about .social-icons {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+  }
   .about__bio {
     font-size: 1rem;
   }
@@ -441,6 +534,52 @@
 @media screen and (min-width: 1600px) {
   .projects__bio-image {
     height: 50vh;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+  }
+  .about__bio-image {
+    height: 100vh;
+    width: 46vw;
+    background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../image/model-2.jpg") center;
+    background-size: cover;
+  }
+  .about__bio-image p {
+    margin-bottom: 2.5rem;
+  }
+  .about__info {
+    display: grid;
+    align-items: center;
+  }
+  .about__bio {
+    text-align: center;
+    padding: 0 1rem 20px 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 40vw;
+    margin: 2rem auto 0 auto;
+  }
+  .about__bio .text-secondary {
+    padding: 0.7rem 0;
+    font-weight: bold;
+  }
+  .about .jobs {
+    width: 30vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .about .jobs__job {
+    background: #414141;
+    padding: 1rem;
+    border-bottom: 5px solid #6d5dff;
+  }
+  .about .social-icons {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
   }
   .about__bio {
     font-size: 1.5rem;

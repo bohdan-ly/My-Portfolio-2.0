@@ -36,8 +36,59 @@
 	}
 
 	.about {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+
+		&__bio-image {
+			height: 100vh;
+			width: 46vw;
+			background:
+				linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)),
+				url('../../image/model-2.jpg') center;
+			background-size: cover;
+
+			p {
+				margin-bottom: 2.5rem;
+			}
+		}
+
+		&__info {
+			display: grid;
+			align-items: center;
+		}
+
 		&__bio {
 			font-size: 1rem;
+			text-align: center;
+			padding: 0 1rem 20px 1rem;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			width: 40vw;
+			margin: 2rem auto 0 auto;
+
+			.text-secondary {
+				padding: 0.7rem 0;
+				font-weight: bold;
+			}
+		}
+
+		.jobs {
+			width: 30vw;
+			margin: 2rem auto 0 auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 2rem;
+
+			&__job {
+				background: lighten($primary-color, 10%);
+				padding: 1rem;
+				border-bottom: 5px solid $secondary-color;
+			}
+		}
+
+		.social-icons {
+			display: flex;
+			flex-direction: column;
+			visibility: visible;
 		}
 	}
 
@@ -76,8 +127,68 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.about__bio {
-		font-size: 1rem;
+	.about {
+		display: flex;
+		grid-template-columns: 1fr 3fr;
+		height: 100vh;
+
+		&__bio-image {
+			height: 100vh;
+			width: 46vw;
+			background:
+				linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)),
+				url('../../image/model-2.jpg') center;
+			background-size: cover;
+
+
+
+
+			p {
+				margin-bottom: 2.5rem;
+			}
+		}
+
+		&__info {
+			display: flex;
+			align-items: center;
+		}
+
+		&__bio {
+			text-align: center;
+			padding: 0 1rem 20px 1rem;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			width: 40vw;
+			margin: 2rem auto 0 auto;
+
+			.text-secondary {
+				padding: 0.7rem 0;
+				font-weight: bold;
+			}
+		}
+
+		.jobs {
+			width: 30vw;
+			margin: 2rem auto 0 auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 2rem;
+
+			&__job {
+				background: lighten($primary-color, 10%);
+				padding: 1rem;
+				border-bottom: 5px solid $secondary-color;
+			}
+		}
+
+		.social-icons {
+			display: flex;
+			flex-direction: column;
+			visibility: visible;
+		}
+
+		&__bio {
+			font-size: 1rem;
+		}
 	}
 }
 
@@ -86,7 +197,66 @@
 		height: 50vh;
 	}
 
-	.about__bio {
-		font-size: 1.5rem;
+	.about {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		height: 100vh;
+
+		&__bio-image {
+			height: 100vh;
+			width: 46vw;
+			background:
+				linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)),
+				url('../../image/model-2.jpg') center;
+			background-size: cover;
+
+
+
+			p {
+				margin-bottom: 2.5rem;
+			}
+		}
+
+		&__info {
+			display: grid;
+			align-items: center;
+		}
+
+		&__bio {
+			text-align: center;
+			padding: 0 1rem 20px 1rem;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			width: 40vw;
+			margin: 2rem auto 0 auto;
+
+			.text-secondary {
+				padding: 0.7rem 0;
+				font-weight: bold;
+			}
+		}
+
+		.jobs {
+			width: 30vw;
+			margin: 2rem auto 0 auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 2rem;
+
+			&__job {
+				background: lighten($primary-color, 10%);
+				padding: 1rem;
+				border-bottom: 5px solid $secondary-color;
+			}
+		}
+
+		.social-icons {
+			display: flex;
+			flex-direction: column;
+			visibility: visible;
+		}
+
+		&__bio {
+			font-size: 1.5rem;
+		}
 	}
 }

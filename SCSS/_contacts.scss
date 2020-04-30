@@ -13,6 +13,7 @@
     h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
+        font-family: 'LeagueSpartan-Bold', monospace;
     }
 
     &__list {
@@ -20,6 +21,7 @@
         grid-template-columns: 1fr;
         grid-gap: 2rem;
         font-size: 1.2rem;
+
     }
 
     .social-icons {

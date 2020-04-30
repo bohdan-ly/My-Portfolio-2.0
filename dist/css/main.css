@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
+@import url("../Fonts/LeagueSpartan-Bold.otf");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,13 +25,13 @@
 .home__text span:not(.full__name):not(.home__name--last) {
   display: inline-block;
   padding: 5px 0;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .home__texth1:hover,
 .home__text span:not(.full__name):not(.home__name--last):hover {
-  color: #6d5dff;
+  color: #ff9e00;
   transition: all 0.5s;
 }
 
@@ -40,15 +41,79 @@
   letter-spacing: 3px;
   word-spacing: 10px;
   font-size: 1rem;
+  font-style: Fira;
+  font-weight: bolder;
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.home__text__stack div:before,
+.home__text__stack div:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.home__text__stack div:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+.home__text__stack div:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
 }
 
 .home__text__stack:hover {
-  color: #6d5dff;
+  color: #ff9e00;
   transition: all 0.5s;
 }
 
 .home__name {
-  font-size: 5rem;
+  font-size: 3rem;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -58,7 +123,7 @@
 }
 
 .home__name--last {
-  color: #6d5dff;
+  color: #ff9e00;
   font-weight: 700;
 }
 
@@ -126,6 +191,10 @@
   visibility: hidden;
 }
 
+.nav__logo {
+  background-color: #272727;
+}
+
 .nav.open {
   visibility: visible;
 }
@@ -158,7 +227,7 @@
 }
 
 .nav .menu-nav__item.active > a {
-  color: #6d5dff;
+  color: #ff9e00;
 }
 
 .nav .menu-nav__link {
@@ -171,7 +240,7 @@
 }
 
 .nav .menu-nav__link:hover {
-  color: #6d5dff;
+  color: #ff9e00;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -197,7 +266,7 @@
 .about__bio-image {
   height: 100vh;
   width: 46vw;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../image/model-2.jpg") center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../image/model-2.jpg") left;
   background-size: cover;
   position: fixed;
   z-index: -1;
@@ -209,8 +278,10 @@
 
 .about__info {
   display: grid;
+  font-size: 14px;
+  padding: 10px 0 0 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10vw;
+  grid-gap: 8vw;
   align-items: center;
   width: 90vw;
 }
@@ -219,7 +290,7 @@
   text-align: center;
   padding: 0 1rem 20px 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 40vw;
+  width: 42vw;
   margin: 0 auto 0 auto;
 }
 
@@ -239,7 +310,7 @@
 .about .jobs__job {
   background: #414141;
   padding: 1rem;
-  border-bottom: 5px solid #6d5dff;
+  border-bottom: 5px solid #ff9e00;
 }
 
 .about .jobs__job h2,
@@ -253,7 +324,9 @@
 
 .about .social-icons {
   display: flex;
-  visibility: hidden;
+  font-size: 10px;
+  bottom: 0;
+  padding-bottom: 5px;
 }
 
 .about footer {
@@ -278,6 +351,7 @@
 .projects__bio-image .text-secondary {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #ff9e00;
 }
 
 .projects__items {
@@ -292,7 +366,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-bottom: 5px solid #6d5dff;
+  border-bottom: 5px solid #ff9e00;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .projects__item img {
@@ -306,7 +381,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: #6d5dff;
+  background: #ff9e00;
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -366,6 +441,7 @@
 .contacts h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  font-family: 'LeagueSpartan-Bold', monospace;
 }
 
 .contacts__list {
@@ -384,8 +460,12 @@
   .menu-btn {
     visibility: hidden;
   }
-  .home__text {
-    padding-top: 0vh;
+  .home__texth1,
+  .home__text span:not(.full__name):not(.home__name--last) {
+    font-size: 2rem;
+  }
+  .full__name {
+    font-size: 4rem;
   }
   .home__name,
   span {
@@ -393,6 +473,10 @@
   }
   .nav {
     visibility: visible;
+  }
+  .nav__logo {
+    visibility: hidden;
+    position: fixed;
   }
   .nav .menu-nav {
     display: block;
@@ -423,37 +507,31 @@
     margin-bottom: 2.5rem;
   }
   .about__info {
-    display: grid;
+    display: flex;
     align-items: center;
   }
   .about__bio {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    background-color: rgba(39, 39, 39, 0.2);
     text-align: center;
     padding: 0 1rem 20px 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 40vw;
-    margin: 2rem auto 0 auto;
+    margin: 1rem 7rem 0 auto;
+    line-height: 1.3rem;
   }
   .about__bio .text-secondary {
     padding: 0.7rem 0;
     font-weight: bold;
   }
-  .about .jobs {
-    width: 30vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-  .about .jobs__job {
-    background: #414141;
-    padding: 1rem;
-    border-bottom: 5px solid #6d5dff;
-  }
   .about .social-icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     visibility: visible;
+    font-size: 1.1rem;
+  }
+  .about footer {
+    transform: rotate(0deg);
   }
   .projects__bio-image {
     height: 40vh;
@@ -472,6 +550,10 @@
 @media screen and (min-width: 1024px) {
   .projects__items {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .nav__logo {
+    visibility: hidden;
+    position: fixed;
   }
   .menu-nav__link {
     font-size: 1.5rem;
@@ -497,17 +579,23 @@
   .about__info {
     display: flex;
     align-items: center;
+    font-size: 2fr;
   }
   .about__bio {
     text-align: center;
-    padding: 0 1rem 20px 1rem;
+    padding: 0 1rem 50px 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 40vw;
-    margin: 2rem auto 0 auto;
+    margin: 2rem 15% 0 auto;
+    background-color: rgba(39, 39, 39, 0.4);
   }
   .about__bio .text-secondary {
     padding: 0.7rem 0;
     font-weight: bold;
+  }
+  .about__bio-main {
+    font-size: 1.2rem;
+    line-height: 1.2;
   }
   .about .jobs {
     width: 30vw;
@@ -519,12 +607,17 @@
   .about .jobs__job {
     background: #414141;
     padding: 1rem;
-    border-bottom: 5px solid #6d5dff;
+    border-bottom: 5px solid #ff9e00;
+    font-size: 1.1rem;
   }
   .about .social-icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     visibility: visible;
+    font-size: 1.1rem;
+  }
+  .about footer {
+    transform: rotate(0deg);
   }
   .about__bio {
     font-size: 1rem;
@@ -534,6 +627,10 @@
 @media screen and (min-width: 1600px) {
   .projects__bio-image {
     height: 50vh;
+  }
+  .nav__logo {
+    visibility: hidden;
+    position: fixed;
   }
   .about {
     display: grid;
@@ -574,12 +671,17 @@
   .about .jobs__job {
     background: #414141;
     padding: 1rem;
-    border-bottom: 5px solid #6d5dff;
+    border-bottom: 5px solid #ff9e00;
+    font-size: 1.2rem;
   }
   .about .social-icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     visibility: visible;
+    font-size: 1.1rem;
+  }
+  .about footer {
+    transform: rotate(0deg);
   }
   .about__bio {
     font-size: 1.5rem;
@@ -605,8 +707,10 @@
 }
 
 .skills > h1 {
-  margin-top: 40px;
-  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  transform: translateY(20%);
+  margin-right: 10px;
   font-size: 10rem;
   opacity: 0.1;
 }
@@ -635,7 +739,7 @@
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
   width: 7rem;
   height: 1.8rem;
-  background-color: #3f2aff;
+  background-color: #cc7e00;
   margin-right: 30px;
 }
 
@@ -650,26 +754,38 @@
 .skills__item > .progressbar {
   position: relative;
   width: 40vw;
-  height: 1.2rem;
-  border: 2px solid #3f2aff;
+  height: 1.17rem;
+  border: 2px solid #cc7e00;
   border-radius: 20px;
   margin-top: 7px;
 }
 
 .skills__item > .progressbar > div {
   position: absolute;
-  background-color: #3f2aff;
-  height: 0.6rem;
+  background-color: #cc7e00;
+  height: 0.59rem;
   border-radius: 20px;
   margin: 2.7px;
   width: calc(0px - 6px);
+}
+
+.skills .social-icons {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.skills footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 body {
   background-color: #272727;
   color: #fff;
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'LeagueSpartan-Bold', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
@@ -685,7 +801,7 @@ a {
 }
 
 .text-secondary {
-  color: #6d5dff;
+  color: #ff9e00;
 }
 
 header {
@@ -712,7 +828,7 @@ main a {
 }
 
 main a:hover {
-  color: #6d5dff;
+  color: #ff9e00;
 }
 
 footer {

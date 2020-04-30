@@ -6,7 +6,7 @@
         width: 46vw;
         background:
             linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)),
-            url('../../image/model-2.jpg') center;
+            url('../../image/model-2.jpg') left;
         background-size: cover;
         position: fixed;
         z-index: -1;
@@ -19,8 +19,10 @@
 
     &__info {
         display: grid;
+        font-size: 14px;
+        padding: 10px 0 0 10px;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10vw;
+        grid-gap: 8vw;
         align-items: center;
         width: 90vw;
     }
@@ -29,7 +31,7 @@
         text-align: center;
         padding: 0 1rem 20px 1rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        width: 40vw;
+        width: 42vw;
         margin: 0 auto 0 auto;
 
         .text-secondary {
@@ -63,8 +65,9 @@
 
     .social-icons {
         display: flex;
-        visibility: hidden;
-
+        font-size: 10px;
+        bottom: 0;
+        padding-bottom: 5px;
     }
 
     footer {

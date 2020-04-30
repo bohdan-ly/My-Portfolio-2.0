@@ -64,6 +64,10 @@
     opacity: 0.98;
     visibility: hidden;
 
+    &__logo {
+        background-color: #272727;
+    }
+
     &.open {
         visibility: visible;
     }

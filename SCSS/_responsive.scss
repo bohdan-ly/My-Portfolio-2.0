@@ -4,7 +4,16 @@
 	}
 
 	.home__text {
-		padding-top: 0vh;
+
+
+		&h1,
+		span:not(.full__name):not(.home__name--last) {
+			font-size: 2rem;
+		}
+	}
+
+	.full__name {
+		font-size: 4rem;
 	}
 
 	.home__name,
@@ -14,6 +23,11 @@
 
 	.nav {
 		visibility: visible;
+
+		&__logo {
+			visibility: hidden;
+			position: fixed;
+		}
 
 		.menu-nav {
 			display: block;
@@ -39,6 +53,7 @@
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 
+
 		&__bio-image {
 			height: 100vh;
 			width: 46vw;
@@ -53,17 +68,19 @@
 		}
 
 		&__info {
-			display: grid;
+			display: flex;
 			align-items: center;
 		}
 
 		&__bio {
-			font-size: 1rem;
+			font-size: 1.1rem;
+			background-color: rgba($primary-color, 0.2);
 			text-align: center;
 			padding: 0 1rem 20px 1rem;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 			width: 40vw;
-			margin: 2rem auto 0 auto;
+			margin: 1rem 7rem 0 auto;
+			line-height: 1.3rem;
 
 			.text-secondary {
 				padding: 0.7rem 0;
@@ -71,24 +88,16 @@
 			}
 		}
 
-		.jobs {
-			width: 30vw;
-			margin: 2rem auto 0 auto;
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-gap: 2rem;
-
-			&__job {
-				background: lighten($primary-color, 10%);
-				padding: 1rem;
-				border-bottom: 5px solid $secondary-color;
-			}
-		}
-
 		.social-icons {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			visibility: visible;
+			font-size: 1.1rem;
+		}
+
+		footer {
+			transform:
+				rotate(0deg);
 		}
 	}
 
@@ -106,6 +115,7 @@
 		}
 	}
 
+
 	.contacts__list {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -116,6 +126,11 @@
 		&__items {
 			grid-template-columns: repeat(2, 1fr);
 		}
+	}
+
+	.nav__logo {
+		visibility: hidden;
+		position: fixed;
 	}
 
 	.menu-nav__link {
@@ -151,18 +166,25 @@
 		&__info {
 			display: flex;
 			align-items: center;
+			font-size: 2fr;
 		}
 
 		&__bio {
 			text-align: center;
-			padding: 0 1rem 20px 1rem;
+			padding: 0 1rem 50px 1rem;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 			width: 40vw;
-			margin: 2rem auto 0 auto;
+			margin: 2rem 15% 0 auto;
+			background-color: rgba($primary-color, 0.4);
 
 			.text-secondary {
 				padding: 0.7rem 0;
 				font-weight: bold;
+			}
+
+			&-main {
+				font-size: 1.2rem;
+				line-height: 1.2;
 			}
 		}
 
@@ -177,13 +199,20 @@
 				background: lighten($primary-color, 10%);
 				padding: 1rem;
 				border-bottom: 5px solid $secondary-color;
+				font-size: 1.1rem;
 			}
 		}
 
 		.social-icons {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			visibility: visible;
+			font-size: 1.1rem;
+		}
+
+		footer {
+			transform:
+				rotate(0deg);
 		}
 
 		&__bio {
@@ -195,6 +224,11 @@
 @include medium-xl {
 	.projects__bio-image {
 		height: 50vh;
+	}
+
+	.nav__logo {
+		visibility: hidden;
+		position: fixed;
 	}
 
 	.about {
@@ -246,13 +280,20 @@
 				background: lighten($primary-color, 10%);
 				padding: 1rem;
 				border-bottom: 5px solid $secondary-color;
+				font-size: 1.2rem;
 			}
 		}
 
 		.social-icons {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			visibility: visible;
+			font-size: 1.1rem;
+		}
+
+		footer {
+			transform:
+				rotate(0deg);
 		}
 
 		&__bio {

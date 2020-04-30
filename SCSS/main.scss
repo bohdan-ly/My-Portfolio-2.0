@@ -7,12 +7,13 @@
 @import 'responsive';
 @import 'skills';
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+@import url('../Fonts/LeagueSpartan-Bold.otf');
 
 body {
     background-color: $primary-color;
     color: set-text-color($primary-color);
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'LeagueSpartan-Bold', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
 }
 

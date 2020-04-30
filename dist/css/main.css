@@ -35,6 +35,11 @@
   transition: all 0.5s;
 }
 
+.home__texth1.f-letter,
+.home__text span:not(.full__name):not(.home__name--last).f-letter {
+  color: #ff9e00;
+}
+
 .home__text__stack {
   display: inline-block;
   padding-top: 15px;

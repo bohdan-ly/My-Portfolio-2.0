@@ -5,7 +5,6 @@
 
 	.home__text {
 
-
 		&h1,
 		span:not(.full__name):not(.home__name--last) {
 			font-size: 2rem;
@@ -30,7 +29,6 @@
 		}
 
 		.menu-nav {
-			display: block;
 			transform: translateY(0);
 			height: 100%;
 			background: transparent;
@@ -45,6 +43,10 @@
 			&__link {
 				font-size: 1.5rem;
 				font-weight: 500;
+			}
+
+			&.open {
+				display: flex;
 			}
 		}
 	}

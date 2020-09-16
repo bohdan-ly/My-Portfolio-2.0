@@ -494,7 +494,6 @@
     position: fixed;
   }
   .nav .menu-nav {
-    display: block;
     transform: translateY(0);
     height: 100%;
     background: transparent;
@@ -507,6 +506,9 @@
   .nav .menu-nav__link {
     font-size: 1.5rem;
     font-weight: 500;
+  }
+  .nav .menu-nav.open {
+    display: flex;
   }
   .about {
     display: grid;
@@ -827,6 +829,10 @@ header {
   z-index: 2;
   width: 100%;
   padding: 1rem;
+}
+
+.menu-nav.open {
+  display: flex;
 }
 
 main {

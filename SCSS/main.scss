@@ -42,6 +42,12 @@ header {
     padding: 1rem;
 }
 
+.menu-nav {
+    &.open {
+        display: flex;
+    }
+}
+
 main {
     height: 100%;
     width: 100%;

@@ -30,11 +30,15 @@
     }
 
     &__text {
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
     .social-icons {
         position: initial;
         margin-top: 2rem;
     }
+}
+
+.text-secondary {
+    padding-top: 7px;
 }

@@ -459,12 +459,16 @@
 }
 
 .contacts__text {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .contacts .social-icons {
   position: initial;
   margin-top: 2rem;
+}
+
+.text-secondary {
+  padding-top: 7px;
 }
 
 @media screen and (min-width: 768px) {
